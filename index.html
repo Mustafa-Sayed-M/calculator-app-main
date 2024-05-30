@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Index Css -->
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- Start App -->
+    <main data-theme-num="1">
+      <div class="app">
+        <!-- ### Top Bar ### -->
+        <div class="top-bar">
+          <h1 class="app-name">calc</h1>
+          <!-- Theme Switcher -->
+          <div class="theme-switcher">
+            <span>THEME</span>
+            <div class="theme" onclick="switchTheme()">
+              <!-- Theme Numbers -->
+              <div class="theme-numbers">
+                <span class="theme-num">1</span>
+                <span class="theme-num">2</span>
+                <span class="theme-num">3</span>
+              </div>
+              <!-- Theme Toggler -->
+              <button type="button" class="theme-toggler">
+                <div class="circle"></div>
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- ### Screen Input ### -->
+        <input
+          type="text"
+          id="number"
+          class="screen-input"
+          value="0"
+          onfocus="whenFocus()"
+          onblur="resetFunction()"
+        />
+        <!-- ### Keypad ### -->
+        <div class="keypad">
+          <!-- Row 1 -->
+          <button class="key" onclick="insertFunction(this)" value="7">
+            7
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="8">
+            8
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="9">
+            9
+          </button>
+          <button class="key key-del" onclick="deleteFunction()" value="del">
+            DEL
+          </button>
+          <!-- Row 2 -->
+          <button class="key" onclick="insertFunction(this)" value="4">
+            4
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="5">
+            5
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="6">
+            6
+          </button>
+          <button class="key key-plus" onclick="insertFunction(this)" value="+">
+            +
+          </button>
+          <!-- Row 3 -->
+          <button class="key" onclick="insertFunction(this)" value="1">
+            1
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="2">
+            2
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="3">
+            3
+          </button>
+          <button
+            class="key key-minus"
+            onclick="insertFunction(this)"
+            value="-"
+          >
+            -
+          </button>
+          <!-- Row 4 -->
+          <button class="key key-" onclick="insertFunction(this)" value=".">
+            .
+          </button>
+          <button class="key" onclick="insertFunction(this)" value="0">
+            0
+          </button>
+          <button
+            class="key key-division"
+            onclick="insertFunction(this)"
+            value="/"
+          >
+            /
+          </button>
+          <button
+            class="key key-multiplication"
+            onclick="insertFunction(this)"
+            value="*"
+          >
+            x
+          </button>
+          <!-- Row 5 -->
+          <button class="key key-reset" onclick="resetFunction()">RESET</button>
+          <button class="key key-equal" onclick="evaluateFunction()">=</button>
+        </div>
+      </div>
+    </main>
+    <!-- End App -->
+    <script>
+      // Get main Element
+      const main = document.querySelector("main");
+      // Function to switch theme
+      const switchTheme = () => {
+        if (+main.dataset.themeNum === 1) {
+          main.dataset.themeNum = 2;
+        } else if (+main.dataset.themeNum === 2) {
+          main.dataset.themeNum = 3;
+        } else {
+          main.dataset.themeNum = 1;
+        }
+      };
+
+      // Get Screen Input
+      const screenInput = document.querySelector(".screen-input");
+
+      // Inset Function
+      const insertFunction = (btn) => {
+        const btnValue = btn.value;
+        screenInput.value += btnValue;
+      };
+
+      // Delete Function
+      const deleteFunction = () => {
+        const value = screenInput.value;
+        screenInput.value = value.slice(0, screenInput.value.length - 1);
+      };
+
+      // Evaluate Function
+      const evaluateFunction = () => {
+        const value = screenInput.value;
+        screenInput.value = eval(value);
+      };
+
+      // Function When Focus
+      const whenFocus = () => {
+        screenInput.value = "";
+      };
+
+      // Reset Function
+      const resetFunction = () => {
+        screenInput.value = 0;
+      };
+    </script>
+  </body>
+</html>

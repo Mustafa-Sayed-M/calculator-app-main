@@ -1,0 +1,385 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* Variables */
+:root {
+
+    /* ## Theme 1 ## */
+    /* ### Background */
+    --very-dark-desaturated-blue-main-background: hsl(222, 26%, 31%);
+    --very-dark-desaturated-blue-toggle-background: hsl(223, 31%, 20%);
+    --very-dark-desaturated-blue-keypad-background: hsl(223, 31%, 20%);
+    --very-dark-desaturated-blue-screen-background: hsl(224, 36%, 15%);
+    /* Keys */
+    --red-key-background: hsl(30, 25%, 89%);
+    --red-key-shadow: hsl(28, 16%, 65%);
+    --red-equal-background: hsl(6, 63%, 50%);
+    --red-equal-shadow: hsl(6, 70%, 34%);
+    --red-toggle-circle-background: hsl(6, 63%, 50%);
+    --desaturated-dark-blue-reset-del-background: hsl(225, 21%, 49%);
+    --desaturated-dark-blue-reset-del-shadow: hsl(224, 28%, 35%);
+    /* #### Text */
+    --very-dark-grayish-blue-text: hsl(221, 14%, 31%);
+    /* ## Theme 2 ## */
+    /* ### Background */
+    --light-gray-main-background: hsl(0, 0%, 90%);
+    --grayish-red-toggle-background: hsl(0, 5%, 81%);
+    --grayish-red-keypad-background: hsl(0, 5%, 81%);
+    --very-light-gray-screen-background: hsl(0, 0%, 93%);
+    /* Keys */
+    --orange-key-background: hsl(45, 7%, 89%);
+    --orange-key-shadow: hsl(35, 11%, 61%);
+    --orange-equal-background: hsl(25, 98%, 40%);
+    --orange-equal-shadow: hsl(25, 99%, 27%);
+    --dark-orange-toggle-circle-background: hsl(25, 98%, 40%);
+    --dark-moderate-cyan-reset-del-background: hsl(185, 42%, 37%);
+    --dark-moderate-cyan-reset-del-shadow: hsl(185, 58%, 25%);
+    /* #### Text */
+    --very-dark-grayish-yellow-text: hsl(60, 10%, 19%);
+    /* ## Theme 3 ## */
+    /* ### Background */
+    --very-dark-violet-main-background: hsl(268, 75%, 9%);
+    --very-dark-violet-toggle-background: hsl(268, 71%, 12%);
+    --very-dark-violet-keypad-background: hsl(268, 71%, 12%);
+    --very-dark-violet-screen-background: hsl(268, 71%, 12%);
+    /* Keys */
+    --pure-cyan-key-background: hsl(268, 47%, 21%);
+    --pure-cyan-key-shadow: hsl(290, 70%, 36%);
+    --pure-cyan-equal-background: hsl(176, 100%, 44%);
+    --pure-cyan-equal-shadow: hsl(177, 92%, 70%);
+    --pure-cyan-toggle-circle-background: hsl(176, 100%, 44%);
+    --dark-violet-reset-del-background: hsl(281, 89%, 26%);
+    --dark-violet-reset-del-shadow: hsl(285, 91%, 52%);
+    /* #### Text */
+    --light-yellow-text: hsl(52, 100%, 62%);
+    --very-dark-blue-text: hsl(198, 20%, 13%);
+
+    /* Global */
+    --white: hsl(0, 0%, 100%);
+}
+
+/* Global Rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+button {
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+input:focus {
+    outline: navajowhite;
+}
+
+/* Body */
+body {
+    font-weight: 700;
+    font-family: "League Spartan", sans-serif;
+}
+
+/* ## Start ## */
+
+/* Start App */
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* End App */
+
+/* Shared Styles */
+
+/* Start App */
+main .app {
+    width: 450px;
+    padding: 0 15px;
+    max-width: 450px;
+}
+
+/* App Name */
+main .app .app-name {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Start Top Bar */
+.top-bar,
+.theme-switcher {
+    display: flex;
+    align-items: end;
+}
+
+.top-bar {
+    margin-bottom: 15px;
+    justify-content: space-between;
+}
+
+.top-bar .theme-switcher {
+    gap: 20px;
+}
+
+.top-bar .theme-switcher .theme {
+    cursor: pointer;
+}
+
+.top-bar .theme-switcher span:not(.theme-num) {
+    letter-spacing: 1px;
+    font-size: 13px;
+}
+
+.top-bar .theme-switcher .theme .theme-numbers {
+    gap: 20px;
+    padding: 0 10px;
+    display: flex;
+    font-size: 14px;
+    margin-bottom: 5px;
+    align-items: center;
+}
+
+.top-bar .theme-switcher .theme .theme-toggler {
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.top-bar .theme-switcher .theme-toggler .circle {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+
+/* End Top Bar */
+
+/* Start Input Screen */
+.screen-input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    height: 100px;
+    padding: 15px;
+    font-size: 4rem;
+    font-weight: bold;
+    direction: rtl;
+    margin-bottom: 15px;
+    background-color: blue;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+/* Hide Arrows */
+.screen-input::-webkit-outer-spin-button,
+.screen-input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* End Input Screen */
+
+/* Start Keypad */
+.keypad {
+    gap: 15px;
+    display: flex;
+    padding: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.keypad button.key {
+    padding: 5px 10px;
+    font-size: 1.7rem;
+    font-weight: bold;
+    border-radius: 7px;
+    width: calc(100% / 4 - 15px);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    -ms-border-radius: 7px;
+    -o-border-radius: 7px;
+}
+
+.keypad button.key.key-equal,
+.keypad button.key.key-reset {
+    width: calc(100% / 2 - 15px);
+}
+
+/* End Keypad */
+
+/* End App */
+
+/* Theme 1 */
+main[data-theme-num="1"] {
+    color: var(--white);
+    background-color: var(--very-dark-desaturated-blue-main-background);
+}
+
+/* Theme Toggler */
+main[data-theme-num="1"] .theme-switcher .theme-toggler {
+    background-color: var(--very-dark-desaturated-blue-toggle-background);
+}
+
+/* Theme Toggler Circle */
+main[data-theme-num="1"] .theme-switcher .theme-toggler .circle {
+    background-color: var(--red-toggle-circle-background);
+}
+
+/* Input Screen */
+main[data-theme-num="1"] .screen-input {
+    color: var(--white);
+    background-color: var(--very-dark-desaturated-blue-screen-background);
+}
+
+/* Keypad */
+main[data-theme-num="1"] .keypad {
+    background-color: var(--very-dark-desaturated-blue-keypad-background);
+}
+
+main[data-theme-num="1"] .keypad button.key:not(.key-equal),
+main[data-theme-num="1"] .keypad button.key:not(.key-del),
+main[data-theme-num="1"] .keypad button.key:not(.key-reset) {
+    box-shadow: 0 3px 2px var(--red-key-shadow);
+    background-color: var(--red-key-background);
+}
+
+/* Equal Key */
+main[data-theme-num="1"] .keypad button.key.key-equal {
+    color: var(--white);
+    background-color: var(--red-equal-background);
+    box-shadow: 0 3px 2px var(--red-equal-shadow);
+}
+
+/* Reset and Delete Key */
+main[data-theme-num="1"] .keypad button.key.key-reset,
+main[data-theme-num="1"] .keypad button.key.key-del {
+    color: var(--white);
+    background-color: var(--desaturated-dark-blue-reset-del-background);
+    box-shadow: 0 3px 2px var(--desaturated-dark-blue-reset-del-shadow);
+}
+
+/* Theme 2 */
+main[data-theme-num="2"] {
+    background-color: var(--light-gray-main-background);
+}
+
+/* Theme Toggler */
+main[data-theme-num="2"] .theme-switcher .theme-toggler {
+    justify-content: center;
+}
+
+main[data-theme-num="2"] .theme-switcher .theme-toggler {
+    background-color: var(--grayish-red-toggle-background);
+}
+
+/* Theme Toggler Circle */
+main[data-theme-num="2"] .theme-switcher .theme-toggler .circle {
+    background-color: var(--dark-orange-toggle-circle-background);
+}
+
+/* Input Screen */
+main[data-theme-num="2"] .screen-input {
+    color: var(--very-dark-grayish-yellow-text);
+    background-color: var(--very-light-gray-screen-background);
+}
+
+/* Keypad */
+main[data-theme-num="2"] .keypad {
+    background-color: var(--grayish-red-keypad-background);
+}
+
+main[data-theme-num="2"] .keypad button.key {
+    box-shadow: 0 3px 2px var(--orange-key-shadow);
+    background-color: var(--orange-key-background);
+}
+
+/* Equal Key */
+main[data-theme-num="2"] .keypad button.key.key-equal {
+    color: var(--white);
+    background-color: var(--orange-equal-background);
+    box-shadow: 0 3px 2px var(--orange-equal-shadow);
+}
+
+/* Reset and Delete Key */
+main[data-theme-num="2"] .keypad button.key.key-reset,
+main[data-theme-num="2"] .keypad button.key.key-del {
+    color: var(--white);
+    background-color: var(--dark-moderate-cyan-reset-del-background);
+    box-shadow: 0 3px 2px var(--dark-moderate-cyan-reset-del-shadow);
+}
+
+/* Theme 3 */
+main[data-theme-num="3"] {
+    color: var(--light-yellow-text);
+    background-color: var(--very-dark-violet-main-background);
+}
+
+/* Theme Toggler */
+main[data-theme-num="3"] .theme-switcher .theme-toggler {
+    justify-content: end;
+}
+
+main[data-theme-num="3"] .theme-switcher .theme-toggler {
+    background-color: var(--very-dark-violet-toggle-background);
+}
+
+/* Theme Toggler Circle */
+main[data-theme-num="3"] .theme-switcher .theme-toggler .circle {
+    background-color: var(--pure-cyan-toggle-circle-background);
+}
+
+/* Input Screen */
+main[data-theme-num="3"] .screen-input {
+    color: var(--light-yellow-text);
+    background-color: var(--very-dark-violet-screen-background);
+}
+
+/* Keypad */
+main[data-theme-num="3"] .keypad {
+    background-color: var(--very-dark-violet-keypad-background);
+}
+
+main[data-theme-num="3"] .keypad button.key {
+    color: var(--light-yellow-text);
+    box-shadow: 0 3px 2px var(--pure-cyan-key-shadow);
+    background-color: var(--pure-cyan-key-background);
+}
+
+/* Equal Key */
+main[data-theme-num="3"] .keypad button.key.key-equal {
+    color: black;
+    background-color: var(--pure-cyan-equal-background);
+    box-shadow: 0 3px 2px var(--pure-cyan-equal-shadow);
+}
+
+/* Reset and Delete Key */
+main[data-theme-num="3"] .keypad button.key.key-reset,
+main[data-theme-num="3"] .keypad button.key.key-del {
+    color: var(--white);
+    background-color: var(--dark-violet-reset-del-background);
+    box-shadow: 0 3px 2px var(--dark-violet-reset-del-shadow);
+}
+
+/* ## End ## */
