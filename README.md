@@ -1,6 +1,7 @@
 # Frontend Mentor - Calculator app
-
-![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
+<a href="https://mustafa-sayed-m.github.io/calculator-app-main/">
+  <img src="./design/desktop-preview.jpg" alt="any" />
+</a>
 
 ## Welcome! 👋
 
